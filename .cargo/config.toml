@@ -1,4 +1,17 @@
-# Build for host (Windows) first — the same code works on Android
-# This avoids Android NDK linker issues
-# During Android build, override with --target aarch64-linux-android and cargo will
-# load this config (which is only for host builds).
+# Windows Rust Android Cross-Compilation Configuration
+#
+# This file configures cargo to cross-compile for Android targets from Windows.
+# It addresses two known issues:
+# 1. The aarch64-linux-android target spec adds --eh-frame-hdr=llvm which the
+#    Android NDK clang.exe doesn't recognize directly as a linker flag.
+# 2. MSYS path conversion breaks native Windows paths.
+#
+# Solution: Use clang.exe as the linker (it knows the Android sysroot),
+# and use -Clink-arg to pass the eh-frame-hdr flag via -Wl, which clang
+# forwards to the underlying linker.
+
+[target.aarch64-linux-android]
+# clang.exe is a real Windows .exe — cargo can exec it natively
+# It knows the Android sysroot and can find -ldl, -llog, etc.
+linker = "X:/Dev/android-ndk/27.3.13750724/toolchains/llvm/prebuilt/windows-x86_64/bin/clang.exe"
+ar = "X:/Dev/android-ndk/27.3.13750724/toolchains/llvm/prebuilt/windows-x86_64/bin/llvm-ar.exe"

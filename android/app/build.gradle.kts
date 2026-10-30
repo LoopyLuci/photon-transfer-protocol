@@ -6,6 +6,7 @@ plugins {
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.hilt)
     alias(libs.plugins.ksp)
+    alias(libs.plugins.compose.compiler)
 }
 
 // ---- Release signing ----
@@ -21,7 +22,7 @@ val keystoreProps = Properties().apply {
 android {
     namespace = "com.prism.ot"
     compileSdk = 35
-    ndkVersion = "26.1.10909125"
+    ndkVersion = "27.3.13750724"
 
     defaultConfig {
         applicationId = "com.prism.ot"
@@ -69,7 +70,6 @@ android {
         release {
             isMinifyEnabled = true
             isShrinkResources = true
-            isZipAlignEnabled = true
             isDebuggable = false
             signingConfig = signingConfigs.getByName("release")
 
@@ -85,22 +85,20 @@ android {
         targetCompatibility = JavaVersion.VERSION_17
     }
 
-    kotlinOptions {
-        jvmTarget = "17"
-        freeCompilerArgs += listOf(
-            "-opt-in=kotlin.RequiresOptIn",
-            "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-            "-Xjvm-default=all"
-        )
+    kotlin {
+        compilerOptions {
+            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
+            freeCompilerArgs.addAll(
+                "-opt-in=kotlin.RequiresOptIn",
+                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                "-Xjvm-default=all"
+            )
+        }
     }
 
     buildFeatures {
         compose = true
         buildConfig = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
     }
 
     packaging {
@@ -125,17 +123,6 @@ android {
 
     sourceSets["main"].jniLibs.srcDirs("src/main/jniLibs")
     sourceSets["main"].assets.srcDirs("src/main/assets")
-
-    // Rename release artifacts to include versionName and versionCode.
-    applicationVariants.configureEach {
-        outputs.configureEach {
-            val ext = outputFile.extension
-            val baseName = outputFile.nameWithoutExtension
-            val version = versionName ?: "0.0.0"
-            val code = versionCode ?: 0
-            outputFileName = "prism-$version-$code-$baseName.$ext"
-        }
-    }
 }
 
 ksp {
