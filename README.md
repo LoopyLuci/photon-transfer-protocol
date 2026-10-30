@@ -1,14 +1,14 @@
-# PRISM — Optical Data Transfer via Fountain Coding
+# Photon Transfer Protocol — Optical Data Transfer via Fountain Coding
 
-PRISM (Progressive Reconstruction via Information-Symbol Modulation) is an
+Photon Transfer Protocol is an
 optical data transfer system that moves files between a source display and a
 destination camera with **no back-channel**. Every frame must be useful — so
-PRISM uses **fountain codes (RaptorQ/LT)** as the primary transport, with QR as a
+Photon Transfer Protocol uses **fountain codes (RaptorQ/LT)** as the primary transport, with QR as a
 fallback for small payloads.
 
 ## How it works
 
-PRISM splits data into three transport systems:
+Photon Transfer Protocol splits data into three transport systems:
 
 | System | Transport | Use case |
 |--------|-----------|----------|
@@ -24,14 +24,14 @@ PRISM splits data into three transport systems:
 4. **Display streaming** — 60-120 FPS output synchronized to display refresh
 5. **Capture/decode** — CameraX + JNI native decoder pool (saturates 60 FPS)
 6. **Reconstruction** — Peeling decoder → SHA-256 verification → reassembly
-7. **AI/ML plane** — Shared cognitive layer (13 models M1-M13) across PRISM and Agentic Workbench
+7. **AI/ML plane** — Shared cognitive layer (13 models M1-M13) across Photon Transfer Protocol and Agentic Workbench
 
 ### Repository layout
 
 ```
 prism/
 ├── core/                 # Rust codec core (fountain, encryption, JNI bridge)
-│   ├── Cargo.toml        # prism_core crate (cdylib for JNI)
+│   ├── Cargo.toml        # photon-transfer-protocol_core crate (cdylib for JNI)
 │   ├── src/
 │   │   ├── lib.rs        # Library entry point + self_test()
 │   │   ├── cli.rs        # Clap-based CLI (encode/inspect/selftest)
@@ -93,11 +93,11 @@ prism encode static --input file.bin --output page.png --mode spc
 # Encode a kinetic fountain stream
 prism encode kinetic --input file.bin --fps 30 --duration 10
 
-# Inspect a PRISM symbol
-prism inspect --symbol ./captured_frame.png
+# Inspect a Photon Transfer Protocol symbol
+photon inspect --symbol ./captured_frame.png
 
 # Self-test
-prism selftest
+photon selftest
 ```
 
 ### Android app

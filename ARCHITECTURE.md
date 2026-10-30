@@ -1,13 +1,13 @@
-# PRISM Architecture
+# Photon Transfer Protocol Architecture
 
-This document explains the architecture of PRISM in detail. It is intended for
+This document explains the architecture of Photon Transfer Protocol in detail. It is intended for
 contributors who want to understand how the system fits together.
 
 ## System overview
 
 ```
 ┌─────────────────────────────────────────────────────────────────────────┐
-│                          PRISM System Architecture                        │
+│                          Photon Transfer Protocol System Architecture                        │
 ├─────────────────────────────────────────────────────────────────────────┤
 │                                                                           │
 │  ┌──────────────┐     ┌──────────────┐     ┌──────────────┐              │
@@ -17,7 +17,7 @@ contributors who want to understand how the system fits together.
 │         │                    │                    │                        │
 │         ▼                    ▼                    ▼                        │
 │  ┌──────────────────────────────────────────────────────────────┐        │
-│  │                    PRISM Core (Rust)                          │        │
+│  │                    Photon Transfer Protocol Core (Rust)                          │        │
 │  │  ┌──────────┐ ┌──────────┐ ┌──────────┐ ┌──────────┐         │        │
 │  │  │ Pre-proc │ │ Fountain │ │  CGG     │ │  JNI     │         │        │
 │  │  │ (zstd)   │ │ (RaptorQ)│ │  Mod     │ │  Bridge  │         │        │
@@ -102,7 +102,7 @@ Fountain symbols (independent, redundant)
 
 **Why fountain codes?**
 
-PRISM has **no back-channel** — the source cannot know which symbols the
+Photon Transfer Protocol has **no back-channel** — the source cannot know which symbols the
 destination received. Fountain codes ensure that **any sufficient subset** of
 symbols can reconstruct the original data, making every frame useful.
 
@@ -301,15 +301,15 @@ fn test_encode_decode_round_trip() {
 ### Kotlin tests
 
 ```kotlin
-// android/app/src/test/java/com/prism/ot/codec/PrismCodecTest.kt
+// android/app/src/test/java/com/prism/ot/codec/PhotonCodecTest.kt
 @Test
 fun testEncodeDecodeRoundTrip() {
     val payload = "test data".toByteArray()
     val config = SessionConfig()
-    val encoder = PrismCodec.createEncoder(config)
+    val encoder = PhotonCodec.createEncoder(config)
     val tiles = encoder.encode(payload)
 
-    val decoder = PrismCodec.createDecoder(config)
+    val decoder = PhotonCodec.createDecoder(config)
     tiles.forEach { decoder.ingest(it) }
     val result = decoder.takeFile()
     assertEquals(payload.toList(), result.toList())

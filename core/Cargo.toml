@@ -1,15 +1,15 @@
 # prism_core
-# JNI bindings for the PRISM optical transfer codec
+# JNI bindings for the Photon Transfer Protocol optical transfer codec
 # Platform: Android (via ndk-build) / Desktop
 
 [package]
 name = "prism_core"
 version = "0.1.0"
 edition = "2021"
-description = "PRISM optical transfer codec core with JNI bindings"
+description = "Photon Transfer Protocol optical transfer codec core with JNI bindings"
 license = "Apache-2.0"
-repository = "https://github.com/prism-ot/prism"
-homepage = "https://github.com/prism-ot/prism"
+repository = "https://github.com/LoopyLuci/photon-transfer-protocol"
+homepage = "https://github.com/LoopyLuci/photon-transfer-protocol"
 
 [lib]
 name = "prism_core"

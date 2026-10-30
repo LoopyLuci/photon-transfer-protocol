@@ -1,11 +1,11 @@
-# Contributing to PRISM
+# Contributing to Photon Transfer Protocol
 
-Thanks for your interest in PRISM! This document explains how to set up your
+Thanks for your interest in Photon Transfer Protocol! This document explains how to set up your
 development environment, the architecture, and how to contribute.
 
 ## Architecture overview
 
-PRISM is a **Rust + Kotlin** project:
+Photon Transfer Protocol is a **Rust + Kotlin** project:
 
 - **`core/`** — Rust codec core (fountain codes, encryption, JNI bridge)
 - **`android/`** — Kotlin Android app (CameraX, UI, orchestration)

@@ -20,5 +20,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "PRISM"
+rootProject.name = "photon-transfer-protocol"
 include(":app")

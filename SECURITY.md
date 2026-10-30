@@ -2,7 +2,7 @@
 
 ## Supported Versions
 
-Only the latest release of PRISM is supported with security updates.
+Only the latest release of Photon Transfer Protocol is supported with security updates.
 
 ## Reporting a Vulnerability
 
@@ -20,7 +20,7 @@ We will acknowledge receipt within 48 hours and aim to provide a fix within 30 d
 
 ## Security practices
 
-PRISM uses:
+Photon Transfer Protocol uses:
 - **AES-256-GCM** encryption for sensitive data
 - **SHA-256** hashing for integrity verification
 - **Fountain codes** for forward error correction
