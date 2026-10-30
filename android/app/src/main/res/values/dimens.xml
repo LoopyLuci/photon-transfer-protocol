@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      Splash screen icon size. 48dp is the recommended maximum for a round
+      icon that fills the default splash-screen space. A non-round icon
+      would use 96dp with a windowSplashScreenIconBackgroundColor.
+    -->
+    <dimen name="splash_screen_icon_size">48dp</dimen>
+
+    <!-- Spacing scale -->
+    <dimen name="space_xxs">4dp</dimen>
+    <dimen name="space_xs">8dp</dimen>
+    <dimen name="space_sm">12dp</dimen>
+    <dimen name="space_md">16dp</dimen>
+    <dimen name="space_lg">20dp</dimen>
+    <dimen name="space_xl">24dp</dimen>
+    <dimen name="space_xxl">32dp</dimen>
+
+    <!-- Component sizes -->
+    <dimen name="touch_target_min">48dp</dimen>
+    <dimen name="corner_radius_sm">12dp</dimen>
+    <dimen name="corner_radius_md">16dp</dimen>
+    <dimen name="corner_radius_lg">20dp</dimen>
+    <dimen name="corner_radius_xl">24dp</dimen>
+    <dimen name="scan_overlay_inset">28dp</dimen>
+    <dimen name="scan_overlay_bracket_length">36dp</dimen>
+</resources>

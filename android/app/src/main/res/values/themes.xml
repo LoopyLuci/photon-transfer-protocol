@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+      Base app theme. The actual colours are applied by the Compose
+      MaterialTheme at runtime; this theme exists so the window background
+      is correct during the first frame and so the splash screen has a
+      post-theme to hand off to.
+    -->
+    <style name="Theme.Prism" parent="android:Theme.Material.NoActionBar">
+        <item name="android:windowBackground">@color/prism_background</item>
+        <item name="android:statusBarColor">@color/prism_background</item>
+        <item name="android:navigationBarColor">@color/prism_background</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="p">
+            shortEdges
+        </item>
+    </style>
+
+    <!--
+      Splash screen theme. Must be set as the theme of the launching
+      activity in the manifest. It applies the SplashScreen library's
+      icon and background, then hands off to Theme.Prism via
+      postSplashScreenTheme.
+    -->
+    <style name="Theme.Prism.Starting" parent="Theme.SplashScreen">
+        <item name="windowSplashScreenBackground">@color/splash_background</item>
+        <item name="windowSplashScreenAnimatedIcon">@drawable/splash_screen</item>
+        <item name="postSplashScreenTheme">@style/Theme.Prism</item>
+    </style>
+
+</resources>

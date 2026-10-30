@@ -1,0 +1,22 @@
+*.iml
+.gradle/
+local.properties
+.idea/
+.DS_Store
+build/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+*.so
+app/src/main/jniLibs/**/*.so
+app/src/main/assets/models/*.tflite
+app/src/main/assets/models/*.bin
+android/app/key.properties
+
+# Rust
+target/
+Cargo.lock
+*.rs.bk
+*.pdb

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App -->
+    <string name="app_name">PRISM</string>
+    <string name="app_tagline">Optical data transport</string>
+
+    <!-- Home -->
+    <string name="home_static_title">Static scan</string>
+    <string name="home_static_subtitle">Printed mosaic · archival · up to 500 KB per page</string>
+    <string name="home_kinetic_title">Kinetic scan</string>
+    <string name="home_kinetic_subtitle">Rotating mass · megabyte transfers · motor control</string>
+    <string name="home_recent_transfers">Recent transfers</string>
+    <string name="home_models_ready">AI models loaded</string>
+    <string name="home_models_missing">Some AI models are missing</string>
+    <string name="home_stat_sessions">Sessions</string>
+    <string name="home_stat_transferred">Transferred</string>
+    <string name="home_stat_default">Default</string>
+    <string name="home_footer">PRISM format v1 · native core · all processing on device</string>
+
+    <!-- Scanner common -->
+    <string name="scan_notification_title">PRISM scanning</string>
+    <string name="scan_notification_text">Camera is active. Tap to return.</string>
+    <string name="scan_notification_stop">Stop</string>
+    <string name="scan_notification_channel">Scanning session</string>
+    <string name="scan_notification_channel_desc">Keeps PRISM active during a transfer</string>
+    <string name="scan_stop_title">Stop scanning?</string>
+    <string name="scan_stop_message">Collected packets will be discarded. You can start again from the same page.</string>
+    <string name="scan_stop_confirm">Stop</string>
+    <string name="scan_waiting_first_face">Waiting for the first face…</string>
+    <string name="scan_reading_tiles">Reading tiles</string>
+    <string name="scan_detecting_mode">Detecting scene…</string>
+
+    <!-- Motor -->
+    <string name="motor_notification_title">PRISM motor connected</string>
+    <string name="motor_notification_text">Rotating mass is under app control.</string>
+    <string name="motor_notification_stop">Disconnect</string>
+    <string name="motor_notification_channel">Motor control</string>
+    <string name="motor_notification_channel_desc">Keeps the BLE motor connection active during a kinetic transfer</string>
+    <string name="motor_connect">Connect</string>
+    <string name="motor_disconnect">Disconnect</string>
+    <string name="motor_connecting">Connecting…</string>
+    <string name="motor_no_motor">No motor</string>
+    <string name="motor_connected">Motor connected</string>
+    <string name="motor_picker_title">Select a rotating mass</string>
+    <string name="motor_picker_scanning">Scanning for PRISM motors…</string>
+    <string name="motor_picker_empty">No motors found. Make sure the mass is powered on.</string>
+    <string name="motor_picker_close">Close</string>
+    <string name="motor_face_rate">Face decode rate</string>
+    <string name="motor_face_rate_detail">%1$d of %2$d faces decoded</string>
+
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_section_scanning">Scanning</string>
+    <string name="settings_section_feedback">Feedback</string>
+    <string name="settings_section_tuning">Tuning</string>
+    <string name="settings_section_models">AI models</string>
+    <string name="settings_section_storage">Storage</string>
+    <string name="settings_auto_detect">Auto-detect mode</string>
+    <string name="settings_auto_detect_sub">Choose static or kinetic from the scene</string>
+    <string name="settings_haptic">Haptic feedback</string>
+    <string name="settings_haptic_sub">Vibrate on tile and face decode</string>
+    <string name="settings_sound">Sound feedback</string>
+    <string name="settings_sound_sub">Short tone on completion</string>
+    <string name="settings_keep_screen_on">Keep screen on</string>
+    <string name="settings_keep_screen_on_sub">Prevent sleep while scanning</string>
+    <string name="settings_debug_overlay">Debug overlay</string>
+    <string name="settings_debug_overlay_sub">Show channel state and model timings</string>
+    <string name="settings_face_payload">Face payload</string>
+    <string name="settings_faces_per_mass">Faces per mass</string>
+    <string name="settings_static_dpi">Static DPI</string>
+    <string name="settings_rotation">Rotation</string>
+    <string name="settings_transferred">Transferred</string>
+    <string name="settings_sessions">Sessions</string>
+    <string name="settings_clear_data">Clear statistics and preferences</string>
+    <string name="settings_clear_title">Clear all data?</string>
+    <string name="settings_clear_message">Statistics and preferences will be reset to defaults. Received files are not deleted.</string>
+    <string name="settings_clear_confirm">Clear</string>
+    <string name="settings_model_not_loaded">not loaded</string>
+    <string name="settings_model_failed">failed</string>
+
+    <!-- Result -->
+    <string name="result_title">Transfer result</string>
+    <string name="result_verified">✓ SHA-256 verified — the file is intact.</string>
+    <string name="result_not_verified">Integrity check did not match. The file was discarded.</string>
+    <string name="result_share_note">The file is available through the system share sheet. For APK payloads, the installer was opened automatically.</string>
+    <string name="result_label_size">Size</string>
+    <string name="result_label_mode">Mode</string>
+    <string name="result_label_duration">Duration</string>
+    <string name="result_label_frames">Frames consumed</string>
+    <string name="result_label_sha">SHA-256</string>
+
+    <!-- Permissions -->
+    <string name="permission_camera_title">Camera access is required</string>
+    <string name="permission_camera_message">PRISM uses the camera to read optical codes. No images leave your device.</string>
+    <string name="permission_camera_grant">Grant camera access</string>
+    <string name="permission_open_settings">Open app settings</string>
+
+    <!-- Common -->
+    <string name="common_back">Back</string>
+    <string name="common_cancel">Cancel</string>
+    <string name="common_dismiss">Dismiss</string>
+    <string name="common_torch_on">Turn flashlight on</string>
+    <string name="common_torch_off">Turn flashlight off</string>
+    <string name="common_eta">ETA</string>
+    <string name="common_eta_placeholder">--</string>
+</resources>

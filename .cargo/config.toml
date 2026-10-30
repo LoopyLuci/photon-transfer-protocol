@@ -1,0 +1,4 @@
+# Build for host (Windows) first — the same code works on Android
+# This avoids Android NDK linker issues
+# During Android build, override with --target aarch64-linux-android and cargo will
+# load this config (which is only for host builds).

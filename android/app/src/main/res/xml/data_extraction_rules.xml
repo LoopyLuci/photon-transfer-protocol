@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <exclude domain="sharedpref" path="prism_preferences.preferences_pb" />
+        <exclude domain="file" path="received/" />
+        <exclude domain="cache" path="prism_models/" />
+    </cloud-backup>
+    <device-transfer>
+        <exclude domain="file" path="received/" />
+        <exclude domain="cache" path="prism_models/" />
+    </device-transfer>
+</data-extraction-rules>

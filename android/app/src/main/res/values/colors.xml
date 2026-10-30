@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+      These colors mirror PrismColors in ui/theme/Color.kt. They exist as
+      resources because the splash screen theme and the notification icon
+      are resolved by the system before Compose is available.
+    -->
+    <color name="prism_background">#0B0E14</color>
+    <color name="prism_surface">#141922</color>
+    <color name="prism_surface_elevated">#1C2430</color>
+    <color name="prism_outline">#2A3444</color>
+
+    <color name="prism_text_primary">#E8ECF2</color>
+    <color name="prism_text_secondary">#9AA6B8</color>
+    <color name="prism_text_disabled">#5A667A</color>
+
+    <color name="prism_cyan">#3DD9C0</color>
+    <color name="prism_violet">#8B6CF0</color>
+    <color name="prism_amber">#F0B429</color>
+    <color name="prism_magenta">#E85C8A</color>
+    <color name="prism_blue">#4C8DFF</color>
+
+    <color name="prism_success">#4CD97B</color>
+    <color name="prism_warning">#F0B429</color>
+    <color name="prism_error">#E85C8A</color>
+
+    <!-- Launcher icon background -->
+    <color name="ic_launcher_background">#0B0E14</color>
+
+    <!-- Splash screen background -->
+    <color name="splash_background">#0B0E14</color>
+</resources>

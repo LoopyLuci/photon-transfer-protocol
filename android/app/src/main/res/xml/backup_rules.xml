@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<full-backup-content>
+    <!--
+      Preferences are device-local: transfer statistics and the last-used
+      motor MAC address should not follow the user to a new device.
+    -->
+    <exclude domain="sharedpref" path="prism_preferences.preferences_pb" />
+    <exclude domain="sharedpref" path="prism_prefs.xml" />
+
+    <!-- Received files can be gigabytes; never back them up -->
+    <exclude domain="file" path="received/" />
+    <exclude domain="file" path="incoming/" />
+
+    <!-- Model cache is regenerated from assets on first launch -->
+    <exclude domain="cache" path="prism_models/" />
+</full-backup-content>

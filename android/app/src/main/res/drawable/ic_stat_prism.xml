@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#FFFFFF">
+
+    <!--
+      Status-bar icon. Must be white on transparent; the system tints it.
+      This is a simplified prism glyph, not the full launcher mark.
+    -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M12,3 L20,19 L4,19 Z M12,8 L16.5,17 L7.5,17 Z" />
+
+</vector>

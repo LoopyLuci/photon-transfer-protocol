@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Reconstructed files waiting for delivery via FileProvider -->
+    <files-path
+        name="received"
+        path="received/" />
+
+    <!-- Temporary encode staging -->
+    <cache-path
+        name="cache"
+        path="." />
+
+    <!-- User-exported files (SAF destination mirror) -->
+    <external-files-path
+        name="exports"
+        path="exports/" />
+
+    <!-- Model cache materialised from assets -->
+    <cache-path
+        name="prism_models"
+        path="prism_models/" />
+</paths>
